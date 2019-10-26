@@ -18,12 +18,13 @@ class ArticleCard extends React.Component {
 		}
 		
 		return (
-			<div className="article-card">
+			<div className={(this.props.big == "big") ? "article-card-big" : "article-card"}>
 				<div style={bgStyle} className="article-card-image-wrapper" >
 					<div className="article-card-tags">{tags}</div>
 				</div>
 				<div className="article-card-content">
 					<h1 className="article-card-title">{this.props.title}</h1>
+					<h2 className="article-card-author">{this.props.author}</h2>
 				</div>
 			</div>
 		);
@@ -31,6 +32,7 @@ class ArticleCard extends React.Component {
 	
 	static defaultProps = {
 		image: Coffee,
+		author: "ryan kim",
 		title: "haha omg title!!",
 		tags: ["coffee", "calm", "cozy"]
 	}

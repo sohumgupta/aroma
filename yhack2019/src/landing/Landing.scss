@@ -1,4 +1,5 @@
 @import '../index.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 .body {
 	background-color: $secondary-color;
@@ -21,6 +22,7 @@
 	background-color: $primary-highlight;
 	color: white;
 	padding: 1em;
+	font-family: $main-font;
 }
 
 .who-we-are-content {
@@ -29,6 +31,7 @@
 	text-align: justify;
 	margin: 0 20%;
 	color: $primary-shadow;
+	font-family: $body-font;
 }
 
 .find-location {
@@ -40,12 +43,14 @@
 	justify-content: center;
 	margin: 2vh 0em;
 	background-color: $primary-highlight;
+	font-family: $main-font;
 }
 
 .find-location-title {
 	text-align: center;
 	font-size: 3em;
 	color: $secondary-color;
+	font-family: $main-font;
 }
 
 .find-location-input {
@@ -54,7 +59,7 @@
 	margin-bottom: 3vh;
 	color: $secondary-color;
 	border: .5vh solid $secondary-color;
-	font-family: $main-font;
+	font-family: $body-font;
 	border-radius: 1vh;
 	outline: none;
 	background-color: rgba(0,0,0,0);
@@ -62,6 +67,7 @@
 
 .popular-cities {
 	font-weight: 400;
+	font-family: $main-font;
 	color: $primary-color;
 	text-align: center;
 	font-size: 3em;

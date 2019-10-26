@@ -4,6 +4,13 @@ import './location-header.scss';
 import Coffee from '../assets/coffee.jpg';
 
 export default class LocationHeader extends Component {
+	
+	_handleKeyDown(e) {
+    if (e.key === 'Enter') {
+			alert("searching for location " + e.target.value);
+    }
+  }
+	
   render() {
 		const bgImage = {
 			backgroundImage: "url(" + this.props.image + ")"
@@ -16,7 +23,8 @@ export default class LocationHeader extends Component {
 						<div className="logo">
 							<p>aroma</p>
 						</div>
-						<div className="login">
+						<input type="text" className="location-search" onKeyDown={this._handleKeyDown}/>	
+						<div className="login">			
 							<button className="login-button">log in</button>
 						</div>
 						<div className="location-title">

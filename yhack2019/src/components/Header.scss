@@ -37,7 +37,6 @@
 	grid-row: 1;
   justify-self: end;
 	align-self: center;
-	margin-right: 3vw;
 }
 
 .login-button {
@@ -50,6 +49,7 @@
 	font-size: 3vh;
 	outline:none;
 	transition: all .5s ease;
+	margin-right: 1vw;
 }
 
 .login-button:hover {
@@ -67,6 +67,6 @@
 
 .navbar .banner-text p {
   font-size: 6vh;
-  font-family: $main-font;
+  font-family: $body-font;
 	text-align: center;
 }

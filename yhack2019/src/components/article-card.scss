@@ -1,14 +1,32 @@
 @import '../index.scss';
 
-.article-card {
+.article-card, .article-card-big {
 	display: inline-block;
 	float: left;
 	height: 25vh;
-	width: 25vw;
+	width: 30vw;
 	border-radius: .5em;
-	box-shadow: 0em 0 2em 0em rgba(0,0,0,.2);
-	margin: 0em 1em;
+	box-shadow: 0em .25em .5em 0em rgba(0,0,0,.2);
+	margin: 1vw;
+	margin-top: 0vw;
+	margin-bottom: 2vw;
 	flex: 0 0 auto;
+}
+
+.article-card-big {
+	height: 53.5vh;
+}
+
+.article-card .article-card-author {
+	display: none;
+}
+
+.article-card-big .article-card-author {
+	display: block;
+	grid-row: 2;
+	margin-left: .5em;
+	align-self: start;
+	font-size: 1.5em;
 }
 
 .article-card-image-wrapper {
@@ -30,10 +48,30 @@
 	align-items: center;
 }
 
+.article-card-big .article-card-content {
+	display: grid;
+	grid-rows: 1fr 1fr;
+}
+
 .article-card-title {
 	margin: 0;
 	margin-left: 1em;
 	font-size: 1em;
+}
+
+.article-card-big .article-card-title {
+	grid-row: 1;
+	margin: 0;
+	margin-left: .5em;
+	font-size: 1.5em;
+	align-self: end;
+}
+
+.article-card-author {
+	margin: 0;
+	margin-left: 1em;
+	font-size: 1em;
+	font-style: italic;
 }
 
 .article-card-tags {

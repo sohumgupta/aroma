@@ -4,7 +4,8 @@ import './Location.scss';
 import ArticleCard from '../components/article-card.js';
 import LocationCard from '../components/location-card.js';
 import ArticleCarousel from '../components/article-carousel.js';
-import LocationContainer from '../components/location-container.js';
+import ArticleContainer from '../components/article-container.js';
+import Footer from '../components/footer.js';
 
 export default class Location extends Component {
 	
@@ -12,7 +13,8 @@ export default class Location extends Component {
     return (
       <div className="body">
         <LocationHeader />
-				<LocationContainer/>
+				<ArticleContainer/>
+				<Footer/>
       </div>
     );
   }

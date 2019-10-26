@@ -5,6 +5,7 @@ import ArticleCard from '../components/article-card.js';
 import LocationCard from '../components/location-card.js';
 import ArticleCarousel from '../components/article-carousel.js';
 import LocationCarousel from '../components/location-carousel.js';
+import Footer from '../components/footer.js';
 
 export default class Landing extends Component {
 	
@@ -35,6 +36,7 @@ export default class Landing extends Component {
 				
 				<h1 className="popular-cities">popular cities</h1>
 				<LocationCarousel/>
+				<Footer/>
       </div>
     );
   }

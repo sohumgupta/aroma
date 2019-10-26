@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Vidaloka&display=swap");
+
 body {
   margin: 0;
   font-family: "Futura", sans-serif;
@@ -7,6 +9,7 @@ body {
 
 :root {
 	overflow-x: hidden;
+	overscroll-behavior: none;
 }
 
 $primary-color: #7F896E;
@@ -14,4 +17,5 @@ $primary-shadow: #666e59;
 $primary-highlight: #a6b094;
 $secondary-color: #FDF5EF;
 $secondary-shadow: #F5EAE1;
-$main-font: Futura, "Avenir", sans-serif;
+$body-font: Futura, "Avenir", sans-serif;
+$main-font: 'Vidaloka', serif;
