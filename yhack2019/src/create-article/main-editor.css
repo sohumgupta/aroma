@@ -1,0 +1,10 @@
+.text {
+	font-size: 1em;
+	font-family: "Futura", sans-serif;
+	padding: 2em;
+	width: 80%;
+	outline: none;
+	border: none;
+	box-shadow: 0 0 1em 0 rgba(0,0,0,.2);
+	resize: none;
+}
