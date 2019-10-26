@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Header from './Header';
+import Header from '../components/Header';
 import './Landing.scss';
-import ArticleCard from './components/article-card.js';
-import LocationCard from './components/location-card.js';
-import ArticleCarousel from './components/article-carousel.js';
-import LocationCarousel from './components/location-carousel.js';
+import ArticleCard from '../components/article-card.js';
+import LocationCard from '../components/location-card.js';
+import ArticleCarousel from '../components/article-carousel.js';
+import LocationCarousel from '../components/location-carousel.js';
 
 class FindLocation extends Component {
 	_handleKeyDown(e) {

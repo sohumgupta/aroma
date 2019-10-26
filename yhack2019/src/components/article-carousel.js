@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import './article-carousel.scss';
-import ArticleCard from './components/article-card.js';
-import LocationCard from './components/location-card.js';
+import ArticleCard from './article-card.js';
+import LocationCard from './location-card.js';
 
 class ArticleCarousel extends Component {
 	render() {

@@ -1,4 +1,4 @@
-@import './index.scss';
+@import '../index.scss';
 
 .Header {
   display: inline-block;
@@ -6,7 +6,7 @@
   height: 80vh;
 	width: 100vw;
   color: white;
-	background-image: url("./assets/coffee.jpg");
+	background-image: url("../assets/coffee.jpg");
 	background-size: cover;
 	background-position: bottom;
 	margin-bottom: 1vh;
