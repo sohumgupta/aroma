@@ -1,5 +1,6 @@
 import React from 'react';
 import './main-editor.scss';
+import Dante from 'Dante2';
 
 
 class MainEditor extends React.Component {
@@ -22,10 +23,12 @@ class MainEditor extends React.Component {
   render() {
 		return(
 			<div className="content">
-          <textarea className="text" value={this.state.value} onChange={this.handleChange}>
-          </textarea>
-          <br/>
-          <input type="submit" value="submit" />
+        <div className="dante-container">
+          <Dante className="text" onChange={() => console.log("hello")} />
+        </div>
+        <div className="submit-container">
+          <input className="submit-button" value="submit" />
+        </div>
 			</div>
 		);
   }
