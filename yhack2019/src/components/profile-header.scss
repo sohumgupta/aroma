@@ -1,0 +1,102 @@
+@import '../index.scss';
+
+.ProfileHeader {
+  display: inline-block;
+	float: left;
+  height: 40vh;
+	width: 100vw;
+  color: white;
+	background-image: url("../assets/coffee.jpg");
+	background-size: cover;
+	background-position: bottom;
+	margin-bottom: 4vh;
+}
+
+.ProfileHeader .navbar {
+	height: 40vh;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 20% 45% 35%;
+}
+
+.navbar .logo {
+	grid-column: 1;
+	grid-row: 1;
+	justify-self: start;
+	align-self: center;
+	margin: 0;
+	margin-left: 5vw;
+	margin-top: 5vw;
+	font-size: 8vh;
+}
+
+.navbar .logo p {
+  font-family: $main-font;
+}
+
+.navbar .login {
+	grid-column: 3;
+	grid-row: 1;
+  justify-self: end;
+	align-self: center;
+	margin-right: 3vw;
+	margin-top: 5vw;
+}
+
+.login-button, .location-search {
+  font-family: $body-font;
+	padding: .25em 1em;
+	color: white;
+	background-color: rgba(0,0,0,0);
+	border: .1em solid white;
+	border-radius: 5em;
+	font-size: 3vh;
+	outline:none;
+	transition: all .5s ease;
+}
+
+.location-search {
+	grid-column: 2;
+	grid-row: 1;
+	margin-top: 5vw;
+	justify-self: center;
+	align-self: center;
+	opacity: .6;
+}
+
+.location-search:hover {
+	opacity: 1;
+}
+
+.login-button:hover {
+	color: black;
+	background-color: white;
+	transition: all .5s ease;
+}
+
+.navbar .profile-picture {
+	grid-column: 1/4;
+	grid-row: 2;
+	justify-self: center;
+  align-self: end;
+	border-radius: 50em;
+	width: 5vw;
+	height: 5vw;
+	background-position: center;
+	background-size: cover;
+	border: .2em solid white;
+}
+
+.navbar .profile-name {
+	grid-column: 1/4;
+	grid-row: 3;
+	justify-self: center;
+  align-self: start;
+}
+
+.navbar .profile-name p {
+  font-size: 6vh;
+	margin: 0;
+  font-family: $body-font;
+	text-align: center;
+}

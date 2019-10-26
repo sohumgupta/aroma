@@ -6,6 +6,15 @@ import Coffee from '../assets/coffee.jpg';
 class ArticleCard extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			favorited: false
+		}
+	}
+	
+	_switchFav(e) {
+		this.setState(prevState => ({
+			favorited: !prevState.favorited
+		}));
 	}
 	
 	render() {
@@ -21,6 +30,7 @@ class ArticleCard extends React.Component {
 			<div className={(this.props.big == "big") ? "article-card-big" : "article-card"}>
 				<div style={bgStyle} className="article-card-image-wrapper" >
 					<div className="article-card-tags">{tags}</div>
+					<div onClick={this._switchFav.bind(this)} className={(this.state.favorited == true) ? "article-favorite fa fa-heart" : "article-favorite fa fa-heart-o"}></div>
 				</div>
 				<div className="article-card-content">
 					<h1 className="article-card-title">{this.props.title}</h1>

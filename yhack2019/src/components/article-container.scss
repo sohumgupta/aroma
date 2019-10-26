@@ -1,0 +1,11 @@
+@import '../index.scss';
+
+body {
+	background-color: $secondary-color;
+}
+
+.article-container {
+	width: calc(90vw + 6vh);
+	margin: 0 auto;
+}
+

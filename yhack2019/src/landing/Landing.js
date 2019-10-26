@@ -8,12 +8,20 @@ import LocationCarousel from '../components/location-carousel.js';
 import Footer from '../components/footer.js';
 
 export default class Landing extends Component {
+	constructor(props) {
+		super(props);
+		this.state={
+			city: ""
+		}
+	}
 	
-	_handleKeyDown(e) {
-    if (e.key === 'Enter') {
-			alert("searching for location " + e.target.value);
-    }
-  }
+	handleChange(e) {
+		this.setState({city: e.target.value});
+	}
+	
+	onSubmit(e) {
+		
+	}
 	
   render() {
     return (
@@ -31,7 +39,11 @@ export default class Landing extends Component {
 					<div className="find-location-title">
 						find a city
 					</div>
-					<input type="text" className="find-location-input" onKeyDown={this._handleKeyDown}/>
+					<iframe name="dummyframe" style={{display: "none"}}/>
+					<form action="/article" method="get" title="dummyframe">
+						<input type="text" onChange={this.handleChange.bind(this)} value={this.state.value} name="city" className="find-location-input"/>
+						<input type="submit" style={{display: "none"}}/>
+					</form>
 				</div>
 				
 				<h1 className="popular-cities">popular cities</h1>
