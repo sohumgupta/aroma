@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "draft-convert": "^2.1.8",
-    "medium-draft": "^0.6.0-beta1",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
