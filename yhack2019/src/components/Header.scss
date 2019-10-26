@@ -1,17 +1,19 @@
+@import './index.scss';
+
 .Header {
   display: inline-block;
 	float: left;
-  height: 50vh;
+  height: 80vh;
 	width: 100vw;
   color: white;
 	background-image: url("./assets/coffee.jpg");
 	background-size: cover;
 	background-position: bottom;
-	margin-bottom: 5vh;
+	margin-bottom: 1vh;
 }
 
 .navbar {
-	height: 50vh;
+	height: 80vh;
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: 20% 80%;
@@ -23,12 +25,12 @@
 	justify-self: start;
 	align-self: center;
 	margin: 0;
-	margin-left: 2vw;
+	margin-left: 5vw;
 	font-size: 8vh;
 }
 
 .navbar .logo p {
-  font-family: "Futura", sans-serif;
+  font-family: $main-font;
 }
 
 .navbar .login {
@@ -36,23 +38,27 @@
 	grid-row: 1;
   justify-self: end;
 	align-self: center;
-	margin-right: 2vw;
-	font-size: 4vh;
+	margin-right: 3vw;
+	font-size: 3vh;	
 }
 
 .navbar .login p {
-  font-family: "Futura",sans-serif;
+  font-family: $main-font;
+	padding: .25em .5em;
+	background-color: white;
+	color: $primary-color;
+	border-radius: 5em;
 }
 
 .navbar .banner-text {
 	grid-column: 1/4;
-	grid-row: 2;
+	grid-row: 1/3;
 	justify-self: center;
   align-self: center;
 }
 
 .navbar .banner-text p {
-  font-size: 5vh;
-  font-family: "Futura",sans-serif;
+  font-size: 6vh;
+  font-family: $main-font;
 	text-align: center;
 }

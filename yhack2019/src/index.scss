@@ -5,5 +5,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+	overflow-x: hidden;
+}
+
 $primary-color: #7F896E;
-$main-font: "Futura", "Avenir", sans-serif;
+$secondary-color: #FDF5EF;
+$main-font: Futura, "Avenir", sans-serif;

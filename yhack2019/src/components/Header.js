@@ -11,11 +11,10 @@ export default class Header extends Component {
 							<p>aroma</p>
 						</div>
 						<div className="login">
-							<p>welcome, ryan</p>
+							<p>log in</p>
 						</div>
 						<div className="banner-text">
-							<p>can you smell the aroma in the room?</p>
-							<p>bruh add more content here too!!!!!</p>
+							<p>Cities can feel inhuman sometimes.<br/>Let aroma help.</p>
 						</div>
 					</div>
         </div>

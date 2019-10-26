@@ -14,11 +14,12 @@ class LocationCard extends React.Component {
 		}
 		
 		return (
-			<div className="article-card">
-				<div style={bgStyle} className="article-card-image-wrapper" >
+			<div className="location-card">
+				<div style={bgStyle} className="location-card-image-wrapper">
+					<h1 className="location-card-title">{this.props.location}</h1>
 				</div>
-				<div className="article-card-content">
-					<h1 className="article-card-title">{this.props.location}</h1>
+				<div className="location-card-content">
+					<h1 className="location-card-subtitle">{this.props.subtitle}</h1>
 				</div>
 			</div>
 		);
@@ -27,6 +28,7 @@ class LocationCard extends React.Component {
 	static defaultProps = {
 		image: Coffee,
 		location: "boise, idaho",
+		subtitle: "the city of trees",
 	}
 }
 

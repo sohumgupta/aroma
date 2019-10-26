@@ -1,0 +1,10 @@
+.carousel {
+	display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+	width: 100%;
+	height: auto;
+	padding: 2em 0em;
+}
+
+.carousel::-webkit-scrollbar { width: 0 !important }

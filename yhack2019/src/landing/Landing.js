@@ -3,36 +3,8 @@ import Header from './Header';
 import './Landing.scss';
 import ArticleCard from './components/article-card.js';
 import LocationCard from './components/location-card.js';
-
-class AllArticles extends Component {
-	render() {
-		return (
-			<div className="carousel">
-				<ArticleCard />
-				<ArticleCard />
-				<ArticleCard />
-				<ArticleCard />
-				<ArticleCard />
-				<ArticleCard />
-			</div>
-		)
-	}
-}
-
-class AllLocations extends Component {
-	render() {
-		return (
-			<div className="carousel">
-				<LocationCard />
-				<LocationCard />
-				<LocationCard />
-				<LocationCard />
-				<LocationCard />
-				<LocationCard />
-			</div>
-		)
-	}
-}
+import ArticleCarousel from './components/article-carousel.js';
+import LocationCarousel from './components/location-carousel.js';
 
 class FindLocation extends Component {
 	_handleKeyDown(e) {
@@ -56,11 +28,18 @@ class FindLocation extends Component {
 export default class Landing extends Component {
   render() {
     return (
-      <div>
+      <div className="body">
         <Header />
+			
+				<div className="who-we-are">
+					<div className="who-we-are-title">who we are</div>
+					<div className="who-we-are-content">
+						Aroma helps you find personal, unique recommendations.
+					</div>
+				</div>
+			
 				<FindLocation />
-				<hr className="divider"/>
-				<AllLocations/>
+				<LocationCarousel/>
       </div>
     );
   }
