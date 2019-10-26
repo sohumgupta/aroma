@@ -2,5 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Landing from './Landing';
+import MainEditor from './MainEditor/main-editor';
 
-ReactDOM.render(<Landing />, document.getElementById('root'));
+ReactDOM.render(<MainEditor />, document.getElementById('root'));
