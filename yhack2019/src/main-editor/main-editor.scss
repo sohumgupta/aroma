@@ -1,0 +1,31 @@
+.content {
+  display: grid;
+  grid-auto-columns: 15% 70% 15%;
+  flex-direction: column;
+}
+
+.dante-container {
+  grid-column: 2;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 2em;
+	outline: none;
+	border: none;
+	box-shadow: 0 0 1em 0 rgba(0,0,0,.2);
+}
+
+.submit-container {
+  justify-self: center;
+  grid-column: 2;
+}
+
+.submit-container .submit-button {
+  background-color: darkgrey;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
