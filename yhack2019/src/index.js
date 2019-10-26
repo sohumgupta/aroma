@@ -3,5 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import Landing from './landing/Landing';
 import Location from './location/Location';
+import Profile from './profile/Profile';
 
-ReactDOM.render(<Location />, document.getElementById('root'));
+ReactDOM.render(<Landing />, document.getElementById('root'));

@@ -4,6 +4,9 @@ import './location-header.scss';
 import Coffee from '../assets/coffee.jpg';
 
 export default class LocationHeader extends Component {
+	state = {
+		inputVal: "find a city..."
+	}
 	
 	_handleKeyDown(e) {
     if (e.key === 'Enter') {
@@ -23,7 +26,7 @@ export default class LocationHeader extends Component {
 						<div className="logo">
 							<p>aroma</p>
 						</div>
-						<input type="text" className="location-search" onKeyDown={this._handleKeyDown}/>	
+						<input type="text" value={this.state.inputVal} onChange={(e) => {this.setState({inputVal: e.target.value})}} className="location-search" onKeyDown={this._handleKeyDown}/>	
 						<div className="login">			
 							<button className="login-button">log in</button>
 						</div>

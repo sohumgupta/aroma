@@ -7,7 +7,11 @@ import LocationCard from './location-card.js';
 class LocationCarousel extends Component {
 	
 	componentDidMount() {
-		document.getElementsByClassName("carousel")[0].scrollLeft = 250;
+		const carousels = document.getElementsByClassName("carousel");
+		const numcarousels = carousels.length
+		for (let i = 0; i < numcarousels; i++) {
+			carousels[i].scrollLeft = 170;
+		}
 	}
 	
 	render() {
