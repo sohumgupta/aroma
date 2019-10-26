@@ -11,7 +11,6 @@ class CreateArticlePage extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>Edit Your Article Here</h1>
 				<MainEditor/>
 			</div>
 		);

@@ -1,38 +1,43 @@
 import React from 'react';
-import './main-editor.css';
+import './main-editor.scss';
+import Dante from 'Dante2';
+import { convertToHTML } from 'draft-convert';
 
-import {
-  Editor,
-  createEditorState,
-} from 'medium-draft';
 
 class MainEditor extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {value: ''};
-
-    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      value: ""
+    };
+    
     this.handleSubmit = this.handleSubmit.bind(this);
-	}
-	
-	handleChange(event) {
-    this.setState({value: event.target.value});
   }
 
-  handleSubmit(event) {
+  onChange = (editor) => {
+    // console.log(editor);
+    const htmlTest = editor.state.editorState.getCurrentContent();
+    console.log(htmlTest);
+    // const contentState = editor.state.editorState.getCurrentContent();
+    // console.log(convertToRaw(contentState));
+  }
+	
+  handleSubmit = (event) => {
+    // const contentState = this.state.editor.getCurrentContent();
+    // this.setState({ value: JSON.stringify(convertToRaw(contentState)) });
     alert('An article was submitted: ' + this.state.value);
   }
 	
   render() {
 		return(
-			<div className="content">
-				<form onSubmit={this.handleSubmit}>
-						<textarea className="text" value={this.state.value} onChange={this.handleChange}>
-						</textarea>
-						<br/>
-						<input type="submit" value="submit" />
-				</form>
-			</div>
+        <div className="content">
+          <div className="dante-container">
+            <Dante onChange={this.onChange} />
+          </div>
+          <div className="submit-container">
+            <input onClick={this.handleSubmit} className="submit-button" type="submit" value="submit" />
+          </div>
+        </div>
 		);
   }
 }
