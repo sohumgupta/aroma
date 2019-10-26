@@ -1,0 +1,58 @@
+.Header {
+  display: inline-block;
+	float: left;
+  height: 50vh;
+	width: 100vw;
+  color: white;
+	background-image: url("./assets/coffee.jpg");
+	background-size: cover;
+	background-position: bottom;
+	margin-bottom: 5vh;
+}
+
+.navbar {
+	height: 50vh;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 20% 80%;
+}
+
+.navbar .logo {
+	grid-column: 1;
+	grid-row: 1;
+	justify-self: start;
+	align-self: center;
+	margin: 0;
+	margin-left: 2vw;
+	font-size: 8vh;
+}
+
+.navbar .logo p {
+  font-family: "Futura", sans-serif;
+}
+
+.navbar .login {
+	grid-column: 3;
+	grid-row: 1;
+  justify-self: end;
+	align-self: center;
+	margin-right: 2vw;
+	font-size: 4vh;
+}
+
+.navbar .login p {
+  font-family: "Futura",sans-serif;
+}
+
+.navbar .banner-text {
+	grid-column: 1/4;
+	grid-row: 2;
+	justify-self: center;
+  align-self: center;
+}
+
+.navbar .banner-text p {
+  font-size: 5vh;
+  font-family: "Futura",sans-serif;
+	text-align: center;
+}
