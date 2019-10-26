@@ -4,6 +4,11 @@
   flex-direction: column;
 }
 
+.editor-page-container {
+  flex-direction: column;
+  display: flex;
+}
+
 .dante-container {
   grid-column: 2;
   margin-bottom: 20px;
@@ -17,6 +22,7 @@
 .submit-container {
   justify-self: center;
   grid-column: 2;
+  padding-bottom: 10%;
 }
 
 .submit-container .submit-button {
@@ -28,4 +34,11 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.submit-button:hover {
+	color: white;
+  background-color: rgb(44, 39, 39);
+  cursor: pointer;
+	transition: all .5s ease;
 }
