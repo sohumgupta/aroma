@@ -1,10 +1,6 @@
 import React from 'react';
-import './main-editor.css';
+import './main-editor.scss';
 
-import {
-  Editor,
-  createEditorState,
-} from 'medium-draft';
 
 class MainEditor extends React.Component {
 	constructor(props) {
@@ -26,12 +22,10 @@ class MainEditor extends React.Component {
   render() {
 		return(
 			<div className="content">
-				<form onSubmit={this.handleSubmit}>
-						<textarea className="text" value={this.state.value} onChange={this.handleChange}>
-						</textarea>
-						<br/>
-						<input type="submit" value="submit" />
-				</form>
+          <textarea className="text" value={this.state.value} onChange={this.handleChange}>
+          </textarea>
+          <br/>
+          <input type="submit" value="submit" />
 			</div>
 		);
   }
