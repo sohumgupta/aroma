@@ -11,7 +11,7 @@ export default class Header extends Component {
 							<p>aroma</p>
 						</div>
 						<div className="login">
-							<p>log in</p>
+							<button className="login-button">log in</button>
 						</div>
 						<div className="banner-text">
 							<p>Cities can feel inhuman sometimes.<br/>Let aroma help.</p>

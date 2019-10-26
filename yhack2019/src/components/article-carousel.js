@@ -5,6 +5,11 @@ import ArticleCard from './article-card.js';
 import LocationCard from './location-card.js';
 
 class ArticleCarousel extends Component {
+		
+	componentDidMount() {
+		document.getElementsByClassName("carousel")[0].scrollLeft = "1em";
+	}
+	
 	render() {
 		return (
 			<div className="carousel">

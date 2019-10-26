@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import './location-carousel.scss';
+import './location-container.scss';
 import ArticleCard from './article-card.js';
 import LocationCard from './location-card.js';
+import LocationCardBig from './location-card-big.js';
 
-class LocationCarousel extends Component {
-	
-	componentDidMount() {
-		document.getElementsByClassName("carousel")[0].scrollLeft = 250;
-	}
+class LocationContainer extends Component {
 	
 	render() {
 		return (
-			<div className="carousel">
+			<div className="location-container">
+				<LocationCardBig />
+				<LocationCardBig />
 				<LocationCard />
 				<LocationCard />
 				<LocationCard />
@@ -26,4 +25,4 @@ class LocationCarousel extends Component {
 	}
 }
 
-export default LocationCarousel;
+export default LocationContainer;

@@ -4,42 +4,66 @@
 	background-color: $secondary-color;
 }
 
+.who-we-are {
+	margin: 0;
+	width: 100%;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	align-items: center;
+	justify-content: center;
+}
+
+.who-we-are-title {
+	width: 100vw;
+	grid-row: 1;
+	font-size: 3em;
+	text-align: center;
+	background-color: $primary-highlight;
+	color: white;
+	padding: 1em;
+}
+
+.who-we-are-content {
+	grid-row: 2;
+	font-size: 1.5em;
+	text-align: justify;
+	margin: 0 20%;
+	color: $primary-shadow;
+}
+
 .find-location {
+	padding: 2em 0em;
 	display: grid;
 	grid-template-rows: 1fr 1fr;
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	margin: 1em;
+	margin: 2vh 0em;
+	background-color: $primary-highlight;
 }
 
-.find-location-text {
+.find-location-title {
 	text-align: center;
 	font-size: 3em;
-	color: $primary-color;
+	color: $secondary-color;
 }
 
 .find-location-input {
 	font-size: 2em;
 	padding: 1vh 2vh;
-	margin: 1vh;
 	margin-bottom: 3vh;
-	color: $primary-color;
-	border: .5vh solid $primary-color;
+	color: $secondary-color;
+	border: .5vh solid $secondary-color;
 	font-family: $main-font;
 	border-radius: 1vh;
 	outline: none;
 	background-color: rgba(0,0,0,0);
 }
 
-.who-we-are {
-	
-}
-
-.who-we-are-title {
-	
-}
-
-.who-we-are-content {
-	
+.popular-cities {
+	font-weight: 400;
+	color: $primary-color;
+	text-align: center;
+	font-size: 3em;
+	margin-bottom: 0;
 }
