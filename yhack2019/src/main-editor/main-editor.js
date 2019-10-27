@@ -14,6 +14,9 @@ class MainEditor extends React.Component {
       title: "",
       author: "",
       city: "",
+      tagString: "",
+      tags: [],
+      img: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,7 +27,9 @@ class MainEditor extends React.Component {
 			title: this.state.title,
 			name: this.state.author,
 			city: this.state.city,
-			text: this.state.value
+			text: this.state.value,
+      tags: this.state.tags,
+      image: this.state.img
 		})
 		.then(function (response) {
 										 console.log(response);
@@ -36,14 +41,16 @@ class MainEditor extends React.Component {
   
   async handleSubmit(event) {
     this.state.value = this.state.editorBlocks.reduce((acc, x) => acc + x.text + "\n", "");
+    this.state.tags = this.state.tagString.split(", ");
+    console.log(this.state.tags);
 		this.publishArticle();
   }
 
-  concatValue = (inText) => {
-    this.setState ({
-      value: this.state.value + "hello" + inText
-    })
-  }
+  // concatValue = (inText) => {
+  //   this.setState ({
+  //     value: this.state.value + "hello" + inText
+  //   })
+  // }
 
   updateEditor = (newBlocks) => {
     this.setState ({
@@ -68,6 +75,18 @@ class MainEditor extends React.Component {
       city: evt.target.value
     })
   }
+
+ updateTagString = (evt) => {
+    this.setState ({
+      tagString: evt.target.value
+    })
+  }
+
+  updateImage = (evt) => {
+    this.setState ({
+      img: evt.target.value
+    })
+  }
 	
   render() {
 		return(
@@ -86,6 +105,8 @@ class MainEditor extends React.Component {
 							<input value={this.state.title} onChange={evt => this.updateTitle(evt)} type="text" placeholder="article title"></input>
               <input value={this.state.city} onChange={evt => this.updateCity(evt)} type="text" placeholder="city"></input>
               <input value={this.state.author} onChange={evt => this.updateAuthor(evt)} type="text" placeholder="your name!"></input>
+              <input value={this.state.tagString} onChange={evt => this.updateTagString(evt)} type="text" placeholder="write some tags!"></input>
+              <input value={this.state.img} onChange={evt => this.updateImage(evt)} type="text" placeholder="upload an image"></input>
 						</div>
 					</div>
         </div>

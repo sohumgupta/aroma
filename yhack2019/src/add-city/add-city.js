@@ -8,16 +8,17 @@ import {Link} from 'react-router-dom';
 class AddCity extends React.Component {
 	constructor(props) {
 		super(props);
+		
 		this.state = {
-      city: "",
-      subtitle: "",
-      image: "",
-    };
+	      city: "",
+	      subtitle: "",
+	      image: "",
+	    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 	
-	async publishArticle() {	
+	async publishCity() {	
 		axios.post('http://localhost:9000/city', {
 			city: this.state.city,
 			subtitle: this.state.subtitle,
@@ -32,8 +33,10 @@ class AddCity extends React.Component {
 	}
   
   async handleSubmit(event) {
-    this.state.value = this.state.editorBlocks.reduce((acc, x) => acc + x.text + "\n", "");
-		this.publishArticle();
+  		console.log(this.state.city);
+  		console.log(this.state.subtitle);
+  		console.log(this.state.image);
+		this.publishCity();
   }
 
   updateCity = (evt) => {

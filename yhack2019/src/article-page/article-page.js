@@ -12,7 +12,7 @@ class ArticlePage extends React.Component {
       title: "",
       author: "",
       city: "",
-			image: "https://livability.com/sites/default/files/BoiseID-IDStateCapitol.jpg"
+		image: ""
     };
   }
   
@@ -21,7 +21,7 @@ class ArticlePage extends React.Component {
 		const res = await fetch("http://localhost:9000/article?title=" + title);
 		const res_json = await res.json();
 		console.log(res_json);
-		this.setState({title: res_json[0].title, author: res_json[0].name, value: res_json[0].text, city: res_json[0].city});
+		this.setState({title: res_json[0].title, author: res_json[0].name, value: res_json[0].text, city: res_json[0].city, image: res_json[0].image});
 	}
 	
   render() {
