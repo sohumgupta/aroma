@@ -2,6 +2,7 @@ import React from 'react';
 import './article-page.scss';
 import '../components/article-header.scss';
 import Dante from 'Dante2';
+import { Link } from 'react-router-dom';
 
 
 class ArticlePage extends React.Component {
@@ -35,7 +36,7 @@ class ArticlePage extends React.Component {
         <div className="article-header" style={bgImage}>
 					<div className="article-navbar">
 						<div className="article-logo">
-							<p>aroma</p>
+							<Link to="/" style={{textDecoration: "none", color: "inherit"}}><p>aroma</p></Link>
 						</div>
 						<div className="article-login">
 							<button className="article-login-button">log in</button>
@@ -50,9 +51,6 @@ class ArticlePage extends React.Component {
         <div className="content">
           <div className="dante-container">
             <p>
-              {this.state.value}
-              {this.state.value}
-              {this.state.value}
               {this.state.value}
             </p>
           </div>
