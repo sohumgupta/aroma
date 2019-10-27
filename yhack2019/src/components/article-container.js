@@ -22,8 +22,8 @@ class ArticleContainer extends Component {
 	render() {
 		var bigArticles = [];
 		if (this.state.articles.length >= 2) {
-			bigArticles = [<ArticleCard big="big" author={this.state.articles[0].name} title={this.state.articles[0].title}/>,
-										  <ArticleCard big="big" author={this.state.articles[1].name} title={this.state.articles[1].title}/>]
+			bigArticles = [<ArticleCard big="big" author={this.state.articles[0].name} title={this.state.articles[0].title} tagArray={this.state.articles[0].tags}/>,
+										  <ArticleCard big="big" author={this.state.articles[1].name} title={this.state.articles[1].title} tagArray={this.state.articles[1].tags}/>]
 		}
 		var numSlice = 0;
 		if (this.state.articles.length >= 2) {
@@ -31,7 +31,7 @@ class ArticleContainer extends Component {
 		} else {
 			numSlice = 0;
 		}
-		const allArticles = (this.state.articles.slice(numSlice, this.state.articles.length)).map((article) => <ArticleCard author={article.author} title={article.title}/>)
+		const allArticles = (this.state.articles.slice(numSlice, this.state.articles.length)).map((article) => <ArticleCard author={article.author} title={article.title} tagArray={article.tags}/>)
 																																											 
 		return (
 			<div className="article-container">

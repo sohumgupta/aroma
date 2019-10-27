@@ -16,7 +16,8 @@ export default class Location extends Component {
 	
 	componentWillMount() {
 		this.setState ({
-			cityname: localStorage.getItem('city')
+      cityname: localStorage.getItem('city')
+      
 		})
 	}
 	

@@ -18,7 +18,11 @@ class ArticleCard extends React.Component {
 		this.setState(prevState => ({
 			favorited: prevState.favorited, redirectPage: true
 		}));
-	}
+  }
+  
+  tagClick() {
+
+  }
 	
 	_switchFav(e) {
 		this.setState(prevState => ({
@@ -28,7 +32,7 @@ class ArticleCard extends React.Component {
 	
 	render() {
 		const tags = this.props.tags.map((tag) =>
-			<div className="article-card-tag">{tag}</div>
+			<div onClick={this.tagClick()} className="article-card-tag">{tag.type}</div>
 		);
 		
 		const bgStyle = {
