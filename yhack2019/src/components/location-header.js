@@ -31,7 +31,7 @@ export default class LocationHeader extends Component {
 							<button className="login-button">log in</button>
 						</div>
 						<div className="location-title">
-							<p>Boise, Idaho</p>
+							<p>{this.props.city}</p>
 						</div>
 					</div>
         </div>
