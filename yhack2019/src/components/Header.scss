@@ -58,6 +58,25 @@
 	transition: all .5s ease;
 }
 
+.add-button {
+  font-family: $main-font;
+	padding: .25em .55em;
+	color: white;
+	background-color: rgba(0,0,0,0);
+	border: .1em solid white;
+	border-radius: 5em;
+	font-size: 3vh;
+	outline:none;
+	transition: all .5s ease;
+	margin-right: 1vw;
+}
+
+.add-button:hover {
+	color: black;
+	background-color: white;
+	transition: all .5s ease;
+}
+
 .navbar .banner-text {
 	grid-column: 1/4;
 	grid-row: 1/3;

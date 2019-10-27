@@ -2,7 +2,7 @@ import React from 'react';
 import './main-editor.scss';
 import '../components/editor-header.scss';
 import Dante from 'Dante2';
-
+import axios from 'axios';
 
 class MainEditor extends React.Component {
 	constructor(props) {
@@ -17,14 +17,25 @@ class MainEditor extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  
 	
+	async publishArticle() {	
+		axios.post('http://localhost:9000/article', {
+			title: this.state.title,
+			name: this.state.author,
+			city: this.state.city,
+			text: this.state.value
+		})
+		.then(function (response) {
+										 console.log(response);
+										 })
+		.catch(function (error) {
+											console.log(error);
+											});
+	}
+  
   async handleSubmit(event) {
     this.state.value = this.state.editorBlocks.reduce((acc, x) => acc + x.text + "\n", "");
-    console.log(this.state.value);
-    console.log(this.state.title);
-    console.log(this.state.author);
-    console.log(this.state.city);
+		this.publishArticle();
   }
 
   concatValue = (inText) => {
@@ -69,9 +80,9 @@ class MainEditor extends React.Component {
 							<button className="editor-login-button">log in</button>
 						</div>
 						<div className="editor-banner-text">
-							<input value={this.state.title} onChange={evt => this.updateTitle(evt)} type="text" placeholder="Article Title"></input>
-              <input value={this.state.city} onChange={evt => this.updateCity(evt)} type="text" placeholder="Article City"></input>
-              <input value={this.state.author} onChange={evt => this.updateAuthor(evt)} type="text" placeholder="by you!"></input>
+							<input value={this.state.title} onChange={evt => this.updateTitle(evt)} type="text" placeholder="article title"></input>
+              <input value={this.state.city} onChange={evt => this.updateCity(evt)} type="text" placeholder="city"></input>
+              <input value={this.state.author} onChange={evt => this.updateAuthor(evt)} type="text" placeholder="your name!"></input>
 						</div>
 					</div>
         </div>
@@ -86,7 +97,6 @@ class MainEditor extends React.Component {
             <input onClick={this.handleSubmit} className="submit-button" value="publish" />
           </div>
         </div>
-        {this.state.value}
       </div>
 		);
   }
