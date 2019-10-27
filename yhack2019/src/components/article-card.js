@@ -25,6 +25,12 @@ class ArticleCard extends React.Component {
 			favorited: !prevState.favorited, redirectPage: false
 		}));
 	}
+
+
+	/*
+	tagClick(tagStr) {
+		this.props.reRender(this.props.articles.filter(article => article.tags.includes(tagStr)));
+	}*/
 	
 	render() {
 		const tags = this.props.tags.map((tag) =>
@@ -40,12 +46,15 @@ class ArticleCard extends React.Component {
 				<Redirect to="/article"/>
 			)
 		} else {
+
+
 				return (
 				<div className={(this.props.big == "big") ? "article-card-big" : "article-card"}>
 					<div style={bgStyle} className="article-card-image-wrapper" >
 						<div className="article-card-tags">{tags}</div>
 						<div onClick={this._switchFav.bind(this)} className={(this.state.favorited == true) ? "article-favorite fa fa-heart" : "article-favorite fa fa-heart-o"}></div>
 					</div>
+					<div className="all-tags">{}</div>
 					<div className="article-card-content" onClick={this.handleClick.bind(this)}>
 						<h1 className="article-card-title">{this.props.title}</h1>
 						<h2 className="article-card-author">{this.props.author}</h2>
