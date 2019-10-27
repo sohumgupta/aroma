@@ -1,3 +1,48 @@
-.title {
-	font-size: 3em;
+.content {
+  display: grid;
+  grid-auto-columns: 15% 70% 15%;
+  flex-direction: column;
+}
+
+.article-page-container {
+  flex-direction: column;
+  display: flex;
+}
+
+.dante-container {
+  grid-column: 2;
+  height: 50vh;
+  font-family: "Futura", sans-serif;
+  color: rgb(49, 49, 49);
+  font-size: 2.5vh;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 2em;
+	outline: none;
+	border: none;
+	box-shadow: 0 0 1em 0 rgba(0,0,0,.2);
+}
+
+.submit-container {
+  justify-self: center;
+  grid-column: 2;
+  padding-bottom: 10%;
+}
+
+.submit-container .submit-button {
+  background-color: darkgrey;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+	color: white;
+  background-color: rgb(44, 39, 39);
+  cursor: pointer;
+	transition: all .5s ease;
 }
