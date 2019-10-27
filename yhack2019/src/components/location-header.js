@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './location-header.scss';
+import { Link } from 'react-router-dom';
 
 import Coffee from '../assets/coffee.jpg';
 
@@ -28,6 +29,7 @@ export default class LocationHeader extends Component {
 						</div>
 						<input type="text" value={this.state.inputVal} onChange={(e) => {this.setState({inputVal: e.target.value})}} className="location-search" onKeyDown={this._handleKeyDown}/>	
 						<div className="login">			
+							<Link to="/editor"><button className="add-button">+</button></Link>
 							<button className="login-button">log in</button>
 						</div>
 						<div className="location-title">

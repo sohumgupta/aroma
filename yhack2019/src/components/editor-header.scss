@@ -6,9 +6,10 @@
   height: 40vh;
 	width: 100vw;
   color: white;
-  background: darkgray;
+  background-image: url("../assets/coffee.jpg");
 	background-size: cover;
 	background-position: bottom;
+	margin-bottom: 4vh;
 }
 
 .editor-navbar {
@@ -24,7 +25,8 @@
 	justify-self: start;
 	align-self: center;
 	margin: 0;
-	margin-left: 3vw;
+	margin-left: 5vw;
+	margin-top: 5vw;
 	font-size: 8vh;
 }
 
@@ -37,10 +39,12 @@
 	grid-row: 1;
   justify-self: end;
 	align-self: center;
+	margin-right: 3vw;
+	margin-top: 5vw;
 }
 
 .editor-login-button {
-  font-family: $main-font;
+  font-family: $body-font;
 	padding: .25em 1em;
 	color: white;
 	background-color: rgba(0,0,0,0);
@@ -68,11 +72,11 @@
 }
 
 .editor-navbar .editor-banner-text input[type=text] {
-  font-size: 6vh;
+  font-size: 5vh;
   font-family: $body-font;
   text-align: center;
   color: white;
-  background: transparent;  
+  background: transparent;
   border: none;
-  padding: 12px 20px;
+	outline: none;
 }

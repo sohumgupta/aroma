@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import './Header.scss';
+import { Link } from 'react-router-dom';
 
 export default class Header extends Component {
+	
+	redirectToEditor() {
+		
+	}
+	
   render() {
     return (
       <div>
@@ -11,6 +17,7 @@ export default class Header extends Component {
 							<p>aroma</p>
 						</div>
 						<div className="login">
+							<Link to="/editor"><button className="add-button">+</button></Link>
 							<button className="login-button">log in</button>
 						</div>
 						<div className="banner-text">
