@@ -8,23 +8,31 @@ class ArticlePage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-      editorBlocks: [],
-      value: "Hello my name is Hello my name is  Hello my name is  Hello my name is  Hello my name is  Hello my name is ",
-      title: "Playboi Carti",
-      author: "Self TItled",
-      city: "Providence",
+      value: "",
+      title: "",
+      author: "",
+      city: "",
+			image: "https://livability.com/sites/default/files/BoiseID-IDStateCapitol.jpg"
     };
   }
   
-
-  componentDidMount() {
-
-  }
+  async componentWillMount() {
+		const title = localStorage.getItem('title');
+		const res = await fetch("http://localhost:9000/article?title=" + title);
+		const res_json = await res.json();
+		console.log(res_json);
+		this.setState({title: res_json[0].title, author: res_json[0].name, value: res_json[0].text, city: res_json[0].city});
+	}
 	
   render() {
+		
+		const bgImage = {
+			backgroundImage: "url(" + this.state.image + ")"
+		}
+		
 		return(
       <div className="article-page-container">
-        <div className="article-header">
+        <div className="article-header" style={bgImage}>
 					<div className="article-navbar">
 						<div className="article-logo">
 							<p>aroma</p>

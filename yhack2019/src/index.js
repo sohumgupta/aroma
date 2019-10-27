@@ -7,4 +7,4 @@ import App from './App.js';
 import MainEditor from './main-editor/main-editor';
 import ArticlePage from './article-page/article-page';
 
-ReactDOM.render(<ArticlePage />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
