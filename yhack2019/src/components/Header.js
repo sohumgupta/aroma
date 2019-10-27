@@ -17,7 +17,8 @@ export default class Header extends Component {
 							<p>aroma</p>
 						</div>
 						<div className="login">
-							<Link to="/editor"><button className="add-button">+</button></Link>
+							<Link to="/editor"><button className="add-article-button">post article</button></Link>
+							<Link to="/addcity"><button className="add-city-button">add city</button></Link>
 							<button className="login-button">log in</button>
 						</div>
 						<div className="banner-text">

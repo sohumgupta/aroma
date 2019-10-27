@@ -3,6 +3,7 @@ import './main-editor.scss';
 import '../components/editor-header.scss';
 import Dante from 'Dante2';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 class MainEditor extends React.Component {
 	constructor(props) {
@@ -74,9 +75,11 @@ class MainEditor extends React.Component {
         <div className="editor-header">
 					<div className="editor-navbar">
 						<div className="editor-logo">
-							<p>aroma</p>
+							<Link to="/" style={{textDecoration: "none"}}><p>aroma</p></Link>
 						</div>
 						<div className="editor-login">
+							<Link to="/editor"><button className="add-article-button">post article</button></Link>
+							<Link to="/addcity"><button className="add-city-button">add city</button></Link>
 							<button className="editor-login-button">log in</button>
 						</div>
 						<div className="editor-banner-text">
